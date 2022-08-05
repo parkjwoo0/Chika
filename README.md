@@ -1,1 +1,1 @@
-# Chika
+# 3조 Rhythm-of-Chika
