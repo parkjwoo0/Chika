@@ -1,7 +1,7 @@
 # 3조 Rhythm-of-Chika
 
 
-## 1. 프로젝트의 목적 및 용도.
+## 1. 프로젝트의 목적 및 용도
 어린이들이 양치질을 꺼려하는 상황 속에서 부모들이 아이들에게 양치질 교육을 하는데 어려움이 있다.
 
 구글의 오픈소스인 ‘mediapipe’를 활용해 양치하는 모습의 손 관절 데이터를 수집하고, 파이토치를 이용하여 양치 부위를 예측하는 모델을 만들고자 했다. 
@@ -18,7 +18,7 @@ requirements.txt
 pip install -r requirements.txt
 ``` 
 
-필요 라이브러리는 requirements.txt를 통해 install가능하다.
+필요 라이브러리는 requirements.txt를 통해 install이 다.
 
  
  ```
@@ -88,9 +88,9 @@ class LSTM_Chicka(nn.Module):
  ```
  
  
-시계열 모델인 LSTM을 사용하였고 이진분류이기 때문에 num_classes는 1로 지정하였습니다.
-LSTM 계층을 num_layers = 2로 두개 쌓았습니다. 이진분류이기 때문에 활성화함수로 sigmoid함수를 사용하였습니다. 
-many to one 방식의 양치구역을 구별했기에 16개의 양치구역 구별 모델을 만들었습니다.
+시계열 모델인 LSTM을 사용하였고 이진분류이기 때문에 num_classes는 1로 지정했다.
+LSTM 계층을 num_layers = 2로 두개 쌓았다. 이진분류이기 때문에 활성화함수로 sigmoid함수를 사용했다. 
+many to one 방식의 양치구역을 구별했기에 16개의 양치구역 구별 모델을 만들었다.
  
   ```
   criterion = torch.nn.BCELoss()     #이중분류시 사용하는 binarycrossentropy 손실함수 사용 
@@ -98,10 +98,10 @@ optimizer = torch.optim.Adam(model.parameters(), lr=0.01)  # Adam 제일 성능�
   
    ```
    
-   optimizer로는 Adam이 가장 좋은 성능을 보여 Adam을 사용하였으며, 이진 분류로 Binary CrossEntropy를 loss function으로 선택하였습니다.
+   optimizer로는 Adam이 가장 좋은 성능을 보여 Adam을 사용하였으며, 이진 분류로 Binary CrossEntropy를 loss function으로 선택했다.
    
    
- ### validation test시에 나온 결과입니다(DMF)
+ ### validation test 시에 나온 결과 (DMF)
    
    ![image](https://user-images.githubusercontent.com/74550931/186811601-b363417f-0cab-443b-a287-bda7eba68edd.png)
 
@@ -110,7 +110,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=0.01)  # Adam 제일 성능�
    
    
    ## 3. 외부 리소스 정보
-mediapipe hand solution을 참조해 손 관절 21개의 랜드마크 좌표 정보를 얻어옴. 
+mediapipe hand solution을 참조해 손 관절 21개의 랜드마크 좌표 정보를 얻음. 
 
 https://google.github.io/mediapipe/solutions/hands.html 
 
